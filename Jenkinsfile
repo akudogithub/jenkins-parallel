@@ -26,7 +26,7 @@ pipeline{
 		}
 		stage('2-maven-build'){
 			steps{
-				sh 'find / -name jenkins'
+				sh 'sudo find / -name jenkins'
 				sh 'id jenkins'
 			}
 		}
@@ -47,6 +47,7 @@ pipeline{
 				stage('sub-job3'){
 					steps{
                         sh 'sort -r /etc/passwd'
+                        sh 'bash /var/lib/jenkins/workspace/parallel-job1/security.sh'
 					}
 				}
 				stage('sub-job4'){
