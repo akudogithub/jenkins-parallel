@@ -1,7 +1,7 @@
 pipeline{
 	agent any 
 	stages{
-		stage('parallel-job'){
+		stage('parallel-job1'){
 			parallel{
 				stage('sub-job1'){
 					steps{
@@ -42,7 +42,7 @@ pipeline{
 				sh '$(LOGNAME)'	
 			}
 		}
-		stage('parallel-job'){
+		stage('parallel-job2'){
 			parallel{
 				stage('sub-job3'){
 					steps{
