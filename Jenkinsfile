@@ -38,8 +38,7 @@ pipeline{
 		}
 		stage('4-code-deploy'){
 			steps{
-				sh '$(SHELL)'
-				sh '$(LOGNAME)'	
+				sh 'id ubuntu'	
 			}
 		}
 		stage('parallel-job2'){
